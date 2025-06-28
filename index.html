@@ -1,185 +1,89 @@
-<html><head>
-<meta charset="utf-8"/>
-<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
-<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Spline+Sans%3Awght%40400%3B500%3B700&amp;family=Fredoka+One%3Awght%40400&amp;family=Inter%3Awght%40400%3B500%3B700" onload="this.rel='stylesheet'" rel="stylesheet"/>
-<title>Stitch Design</title>
-<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<style type="text/tailwindcss">
-      :root {
-        --primary-color: #FF7E5F;--secondary-color: #FEB47B;--accent-color: #FFD700;--text-primary: #333333;--text-secondary: #ffffff;
-        --bg-color: #FFF8F0;}
-      body {
-        font-family: "Inter", "Spline Sans", "Noto Sans", sans-serif;
-        background-color: var(--bg-color);
-      }
-      .nav-link {
-        @apply text-sm font-medium text-[var(--text-primary)] hover:text-[var(--primary-color)] transition-colors duration-300 rounded-full px-3 py-1;
-      }
-      .btn-primary {
-        @apply flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-6 bg-[var(--primary-color)] text-[var(--text-secondary)] text-base font-bold leading-normal tracking-[0.015em] hover:bg-[var(--secondary-color)] transition-all duration-300 ease-in-out shadow-lg transform hover:scale-105;
-      }
-      .btn-secondary {
-        @apply flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-6 bg-white border-2 border-[var(--primary-color)] text-[var(--primary-color)] text-base font-bold leading-normal tracking-[0.015em] hover:bg-[var(--primary-color)] hover:text-white transition-all duration-300 ease-in-out shadow-md transform hover:scale-105;
-      }
-      .hero-gradient-override {
-        background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-      }
-      .playful-font {
-        font-family: "Fredoka One", cursive;
-      }
-      .blob-shape {
-        border-radius: 60% 40% 30% 70% / 50% 60% 40% 50%;
-      }
-      .wave-bg {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        overflow: hidden;
-        line-height: 0;
-        transform: rotate(180deg);
-      }
-      .wave-bg svg {
-        position: relative;
-        display: block;
-        width: calc(100% + 1.3px);
-        height: 150px;}
-      .wave-bg .shape-fill {
-        fill: var(--bg-color);
-      }
-    </style>
-</head>
-<body>
-<div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
-<div class="layout-container flex h-full grow flex-col">
-<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-b-transparent bg-white/80 backdrop-blur-md px-6 md:px-10 py-4">
-<div class="flex items-center gap-3">
-<div class="size-10 text-[var(--primary-color)] p-1 bg-white rounded-full shadow-sm">
-<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path></svg>
-</div>
-<h2 class="text-[var(--text-primary)] text-2xl font-bold leading-tight tracking-tight playful-font">CareerPath</h2>
-</div>
-<nav class="hidden md:flex items-center gap-2">
-<a class="nav-link" href="#">Программы</a>
-<a class="nav-link" href="#">О нас</a>
-<a class="nav-link" href="#">Истории успеха</a>
-<a class="nav-link" href="#">Блог</a>
-</nav>
-<div class="flex items-center gap-3">
-<button class="btn-primary"><span class="truncate">Начать</span></button>
-<button class="btn-secondary hidden sm:flex"><span class="truncate">Войти</span></button>
-<button class="md:hidden p-2 rounded-full text-[var(--text-primary)] hover:bg-[var(--secondary-color)] hover:text-white transition-colors duration-300">
-<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round"></path>
-</svg>
-</button>
-</div>
-</header>
-<main class="flex flex-1 flex-col">
-<section class="relative hero-gradient-override w-full overflow-hidden">
-<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 lg:py-32 text-center relative z-10">
-<div class="max-w-3xl mx-auto">
-<h1 class="playful-font text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight text-white mb-6">
-            Открой <span class="text-[var(--accent-color)]">свой</span> путь к <span class="text-[var(--accent-color)]">мечте</span>!
-          </h1>
-<p class="text-white text-lg sm:text-xl lg:text-2xl font-medium leading-relaxed mb-10">
-            CareerPath — это веселое путешествие в мир профессий! Мы поможем найти то, что тебе действительно нравится, и научим всему необходимому.
-          </p>
-<div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-<button class="btn-primary text-lg px-8 py-3 w-full sm:w-auto">
-<span class="truncate">Попробовать бесплатно</span>
-</button>
-<a class="text-white font-semibold hover:underline rounded-full px-6 py-3 transition-all duration-300 hover:bg-white/20" href="#">Узнать больше</a>
-</div>
-</div>
-</div>
-<div class="absolute -bottom-1 left-0 w-full h-24 md:h-32 lg:h-40 z-0">
-<svg class="w-full h-full" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
-<defs>
-<linearGradient id="waveGradient" x1="0%" x2="0%" y1="0%" y2="100%">
-<stop offset="0%" style="stop-color:rgba(255,255,255,0.1);stop-opacity:1"></stop>
-<stop offset="100%" style="stop-color:var(--bg-color);stop-opacity:1"></stop>
-</linearGradient>
-</defs>
-<path d="M0,160L48,170.7C96,181,192,203,288,208C384,213,480,203,576,176C672,149,768,107,864,112C960,117,1056,171,1152,192C1248,213,1344,203,1392,197.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" fill="url(#waveGradient)"></path>
-<path d="M0,224L40,213.3C80,203,160,181,240,186.7C320,192,400,224,480,240C560,256,640,256,720,234.7C800,213,880,171,960,160C1040,149,1120,171,1200,181.3C1280,192,1360,192,1400,192L1440,192L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z" fill="var(--bg-color)"></path>
-</svg>
-</div>
-<div class="absolute top-10 left-10 opacity-20 animate-pulse">
-<div class="w-16 h-16 bg-[var(--accent-color)] blob-shape transform rotate-12"></div>
-</div>
-<div class="absolute bottom-20 right-10 opacity-10 animate-bounce">
-<div class="w-24 h-24 bg-white blob-shape transform -rotate-12"></div>
-</div>
-<div class="absolute top-1/3 right-1/4 opacity-15 animate-ping duration-3000">
-<div class="w-12 h-12 border-4 border-white rounded-full"></div>
-</div>
-<div class="absolute bottom-1/4 left-1/4 opacity-20 animate-spin-slow">
-<svg class="h-10 w-10 text-[var(--accent-color)]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 3v4M3 5h4M6 17v4m-3-2h4m10-12v4m-3-2h4m3 10v4m-3-2h4M12 6v12m-3-6h6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</div>
-</section>
-<section class="py-16 md:py-24 lg:py-32 bg-[var(--bg-color)]">
-<div class="container mx-auto px-4 sm:px-6 lg:px-8">
-<div class="text-center mb-12 md:mb-16">
-<h2 class="playful-font text-4xl sm:text-5xl font-bold text-[var(--text-primary)] mb-4">Что мы предлагаем?</h2>
-<p class="text-lg text-gray-600 max-w-2xl mx-auto">Мы создали уникальную платформу, чтобы сделать обучение и выбор профессии увлекательным приключением!</p>
-</div>
-<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-<div class="bg-white p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2 flex flex-col items-center text-center">
-<div class="p-4 bg-gradient-to-br from-[var(--primary-color)] to-[var(--secondary-color)] rounded-full inline-block mb-6 shadow-lg">
-<svg class="h-10 w-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 6.253v11.494m0 0A8.001 8.001 0 004 17.747M12 17.747A8.001 8.001 0 0020 17.747M12 17.747L12 6.253" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</div>
-<h3 class="text-2xl font-bold text-[var(--text-primary)] mb-3 playful-font">Профориентация</h3>
-<p class="text-gray-500 leading-relaxed">Поможем раскрыть таланты и найти профессию мечты через игры и тесты.</p>
-</div>
-<div class="bg-white p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2 flex flex-col items-center text-center">
-<div class="p-4 bg-gradient-to-br from-[var(--accent-color)] to-yellow-400 rounded-full inline-block mb-6 shadow-lg">
-<svg class="h-10 w-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</div>
-<h3 class="text-2xl font-bold text-[var(--text-primary)] mb-3 playful-font">Обучающие модули</h3>
-<p class="text-gray-500 leading-relaxed">Индивидуальные программы, чтобы учиться было интересно и эффективно.</p>
-</div>
-<div class="bg-white p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2 flex flex-col items-center text-center md:col-span-2 lg:col-span-1">
-<div class="p-4 bg-gradient-to-br from-green-400 to-teal-500 rounded-full inline-block mb-6 shadow-lg">
-<svg class="h-10 w-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</div>
-<h3 class="text-2xl font-bold text-[var(--text-primary)] mb-3 playful-font">Поддержка наставников</h3>
-<p class="text-gray-500 leading-relaxed">Опытные кураторы всегда готовы помочь и ответить на вопросы.</p>
-</div>
-</div>
-</div>
-</section>
-</main>
-<footer class="bg-gray-800 text-white py-12 rounded-t-3xl">
-<div class="container mx-auto px-6 md:px-10 text-center">
-<div class="flex items-center justify-center gap-3 mb-4">
-<div class="size-8 text-[var(--primary-color)]">
-<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path></svg>
-</div>
-<h2 class="text-xl font-bold leading-tight tracking-tight playful-font">CareerPath</h2>
-</div>
-<p class="text-gray-400 text-sm mb-6">Найди свой путь к успеху вместе с нами!</p>
-<div class="flex justify-center space-x-6 mb-6">
-<a class="text-gray-400 hover:text-[var(--primary-color)] transition-colors duration-300" href="#">Программы</a>
-<a class="text-gray-400 hover:text-[var(--primary-color)] transition-colors duration-300" href="#">О нас</a>
-<a class="text-gray-400 hover:text-[var(--primary-color)] transition-colors duration-300" href="#">Контакты</a>
-</div>
-<p class="text-xs text-gray-500">© 2024 CareerPath. Все права защищены.</p>
-</div>
-</footer>
-</div>
-</div>
-<style>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>beep-mind - Твой Путь к Мечте</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Inter:wght@400;500;700&family=Poppins:wght@400;500;600;700&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+        :root {
+            --primary-color: #FF7E5F;
+            --secondary-color: #FEB47B;
+            --accent-color: #FFD700;
+            --text-primary: #333333;
+            --text-secondary: #ffffff;
+            --bg-color: #FFF8F0;
+            --bg-light: #FFFFFF;
+            --border-color: #FFE0B2;
+            --like-color: #4ade80; /* green-400 */
+            --dislike-color: #f87171; /* red-400 */
+        }
+
+        body {
+            font-family: 'Inter', 'Rubik', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+        }
+
+        .playful-font {
+            font-family: 'Fredoka One', cursive;
+        }
+
+        .nav-link {
+            @apply text-sm font-medium text-[var(--text-primary)] hover:text-[var(--primary-color)] transition-colors duration-300 rounded-full px-3 py-1;
+        }
+        
+        .btn-primary {
+            @apply flex items-center justify-center min-w-[84px] max-w-[480px] h-12 px-6 rounded-full bg-[var(--primary-color)] text-[var(--text-secondary)] text-base font-bold tracking-wide cursor-pointer transition-all duration-300 ease-in-out shadow-lg transform hover:scale-105 hover:bg-orange-500;
+        }
+
+        .btn-secondary {
+            @apply flex items-center justify-center min-w-[84px] max-w-[480px] h-12 px-6 rounded-full bg-white border-2 border-[var(--primary-color)] text-[var(--primary-color)] text-base font-bold tracking-wide cursor-pointer transition-all duration-300 ease-in-out shadow-md transform hover:scale-105 hover:bg-[var(--primary-color)] hover:text-white;
+        }
+        
+        .hero-gradient-override {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+        }
+        
+        .card {
+            @apply bg-white p-6 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2;
+        }
+
+        .blob-shape {
+            border-radius: 60% 40% 30% 70% / 50% 60% 40% 50%;
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+
+        .tab-active {
+            @apply bg-[var(--primary-color)] text-white shadow-md;
+        }
+
+        .tab-inactive {
+            @apply bg-white text-gray-600 hover:bg-orange-100 hover:text-[var(--primary-color)];
+        }
+
         @keyframes spin-slow {
-          to {
-            transform: rotate(360deg);
-          }
+          to { transform: rotate(360deg); }
         }
         .animate-spin-slow {
-          animation: spin-slow 5s linear infinite;
+          animation: spin-slow 15s linear infinite;
         }
-        @keyframes bounce {
+        
+        @keyframes bounce-custom {
           0%, 100% {
             transform: translateY(-10%) rotate(-12deg);
             animation-timing-function: cubic-bezier(0.8,0,1,1);
@@ -189,16 +93,426 @@
             animation-timing-function: cubic-bezier(0,0,0.2,1);
           }
         }
-        .animate-bounce {
-          animation: bounce 3s infinite;
+        .animate-bounce-custom {
+          animation: bounce-custom 4s infinite;
         }
-         @keyframes pulse {
+
+        @keyframes pulse-custom {
           0%, 100% { opacity: 0.2; transform: scale(0.95) rotate(12deg); }
           50% { opacity: 0.4; transform: scale(1) rotate(12deg); }
         }
-        .animate-pulse {
-          animation: pulse 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        .animate-pulse-custom {
+          animation: pulse-custom 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
         }
-</style>
-</body></html>
 
+        /* Animation for course constructor */
+        @keyframes card-appear {
+            from { opacity: 0; transform: translateY(20px) scale(0.9); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        .animate-card-appear { animation: card-appear 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; }
+
+        @keyframes swipe-right {
+            to { opacity: 0; transform: translateX(150%) rotate(20deg); }
+        }
+        .animate-swipe-right { animation: swipe-right 0.6s cubic-bezier(0.55, 0.085, 0.68, 0.53) forwards; }
+        
+        @keyframes swipe-left {
+            to { opacity: 0; transform: translateX(-150%) rotate(-20deg); }
+        }
+        .animate-swipe-left { animation: swipe-left 0.6s cubic-bezier(0.55, 0.085, 0.68, 0.53) forwards; }
+
+    </style>
+</head>
+<body>
+<div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+    <!-- HEADER -->
+    <header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-b-transparent bg-white/80 backdrop-blur-md px-6 md:px-10 py-4">
+        <div class="flex items-center gap-3">
+            <div class="size-10 text-[var(--primary-color)] p-1 bg-white rounded-full shadow-sm">
+                <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path></svg>
+            </div>
+            <h2 class="text-[var(--text-primary)] text-2xl font-bold leading-tight tracking-tight playful-font">beep-mind</h2>
+        </div>
+        <nav class="hidden md:flex items-center gap-2">
+            <a class="nav-link" href="#about">О нас</a>
+            <a class="nav-link" href="#courses">Направления</a>
+            <a class="nav-link" href="#team">Команда</a>
+            <a class="nav-link" href="#contact">Контакты</a>
+        </nav>
+        <div class="flex items-center gap-4">
+            <a href="#" class="text-gray-600 hover:text-sky-500 transition-colors duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="m9.417 15.181-.397 5.584c.568 0 .814-.244 1.109-.537l2.663-2.545 5.518 4.041c1.012.564 1.725.267 1.998-.931L22.43 3.864c.345-1.615-.833-2.298-1.94-1.742L2.347 8.402c-1.554.6-1.55 1.482-.288 1.811L8.25 12.45l9.86-6.235c.449-.283.875-.133.523.182Z"/></svg>
+            </a>
+            <a href="#" class="text-gray-600 hover:text-blue-500 transition-colors duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.84c-.15.48-.52.62-.9.45-.48-.21-1.05-.4-1.68-.59-.69-.2-1.42-.31-2.06-.31-.57 0-1.13.08-1.68.24-.55.16-1.09.4-1.62.72-.52.32-.98.71-1.42 1.17-.43.46-.88.98-1.02 1.63-.13.6.14 1.25.43 1.84.29.59.62 1.14.99 1.66.42.58.89 1.1 1.42 1.55.53.45 1.1.83 1.71 1.14.61.31 1.25.52 1.91.62.66.1 1.32-.01 1.97-.24.65-.23 1.28-.59 1.84-1.06.56-.47 1.05-1.02 1.42-1.64.37-.62.63-1.3.62-2.02-.02-1.39-.77-2.67-1.7-3.56-.1-.1-.2-.18-.31-.26z"/></svg>
+            </a>
+            <button class="md:hidden p-2 rounded-full text-[var(--text-primary)] hover:bg-[var(--secondary-color)] hover:text-white transition-colors duration-300">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main class="flex flex-1 flex-col">
+        <!-- HERO SECTION -->
+        <section class="relative hero-gradient-override w-full overflow-hidden">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 lg:py-32 text-center relative z-10">
+                <div class="max-w-3xl mx-auto">
+                    <h1 class="playful-font text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight text-white mb-6">
+                        Открой <span class="text-[var(--accent-color)]">свой</span> путь к <span class="text-[var(--accent-color)]">мечте</span>!
+                    </h1>
+                    <p class="text-white text-lg sm:text-xl lg:text-2xl font-medium leading-relaxed mb-10">
+                        beep-mind — это веселое путешествие в мир профессий! Мы поможем найти то, что тебе действительно нравится, и научим всему необходимому.
+                    </p>
+                    <div class="flex justify-center items-center">
+                        <a href="#courses" class="btn-primary text-lg px-8 py-3 w-full sm:w-auto">
+                            <span class="truncate">Выбрать курс</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute -bottom-px left-0 w-full h-24 md:h-32 lg:h-40 z-0">
+                <svg class="w-full h-full" viewBox="0 0 1440 320" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0,224L40,213.3C80,203,160,181,240,186.7C320,192,400,224,480,240C560,256,640,256,720,234.7C800,213,880,171,960,160C1040,149,1120,171,1200,181.3C1280,192,1360,192,1400,192L1440,192L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z" fill="var(--bg-color)"></path>
+                </svg>
+            </div>
+             <div class="absolute top-10 left-10 opacity-20 animate-pulse-custom">
+                <div class="w-16 h-16 bg-[var(--accent-color)] blob-shape transform rotate-12"></div>
+            </div>
+            <div class="absolute bottom-20 right-10 opacity-10 animate-bounce-custom">
+                <div class="w-24 h-24 bg-white blob-shape transform -rotate-12"></div>
+            </div>
+            <div class="absolute top-1/3 right-1/4 opacity-15 animate-ping duration-3000">
+                <div class="w-12 h-12 border-4 border-white rounded-full"></div>
+            </div>
+            <div class="absolute bottom-1/4 left-1/4 opacity-20 animate-spin-slow">
+                <svg class="h-10 w-10 text-[var(--accent-color)]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 3v4M3 5h4M6 17v4m-3-2h4m10-12v4m-3-2h4m3 10v4m-3-2h4M12 6v12m-3-6h6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+            </div>
+        </section>
+
+        <!-- ABOUT / WHAT WE OFFER SECTION -->
+        <section id="about" class="py-16 md:py-24 lg:py-32 bg-[var(--bg-color)]">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 md:mb-16">
+                    <h2 class="playful-font text-4xl sm:text-5xl font-bold text-[var(--text-primary)] mb-4">Образовательная Синергия</h2>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto">Мы не просто проводим тесты. Мы создаем уникальную образовательную траекторию, где курсы и профориентация работают вместе, чтобы раскрыть твой потенциал.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card flex flex-col items-center text-center">
+                        <div class="p-4 bg-gradient-to-br from-[var(--primary-color)] to-[var(--secondary-color)] rounded-full inline-block mb-6 shadow-lg"><svg class="h-10 w-10 text-white" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" /></svg></div>
+                        <h3 class="text-2xl font-bold text-[var(--text-primary)] mb-3 playful-font">1. Исследуем Интересы</h3>
+                        <p class="text-gray-500 leading-relaxed">Начинаем с увлекательного исследования твоих талантов и увлечений с помощью нашего ИИ-помощника и опытных наставников.</p>
+                    </div>
+                    <div class="card flex flex-col items-center text-center">
+                        <div class="p-4 bg-gradient-to-br from-[var(--accent-color)] to-yellow-400 rounded-full inline-block mb-6 shadow-lg"><svg class="h-10 w-10 text-white" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" /></svg></div>
+                        <h3 class="text-2xl font-bold text-[var(--text-primary)] mb-3 playful-font">2. Строим Путь</h3>
+                        <p class="text-gray-500 leading-relaxed">На основе твоих интересов мы подбираем не только профессии, но и конкретные курсы из наших модулей, создавая персональный план обучения.</p>
+                    </div>
+                    <div class="card flex flex-col items-center text-center md:col-span-2 lg:col-span-1">
+                        <div class="p-4 bg-gradient-to-br from-green-400 to-teal-500 rounded-full inline-block mb-6 shadow-lg"><svg class="h-10 w-10 text-white" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0l-.07.004c-.03.001-.06.002-.09.003l-.07.004c-.03.001-.06.002-.09.003m15.482 0l.07.004c.03.001.06.002.09.003l.07.004c.03.001.06.002.09.003" /></svg></div>
+                        <h3 class="text-2xl font-bold text-[var(--text-primary)] mb-3 playful-font">3. Растем Вместе</h3>
+                        <p class="text-gray-500 leading-relaxed">Ты проходишь выбранные курсы, получая поддержку кураторов, и применяешь знания на практике, двигаясь к профессии мечты.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- COURSE CONSTRUCTOR SECTION -->
+        <section id="constructor" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-gradient-to-br from-orange-400 via-pink-300 to-yellow-200 rounded-3xl p-8 md:p-12 flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+                    <div class="lg:w-1/2 text-center lg:text-left text-white">
+                         <h2 class="playful-font text-4xl sm:text-5xl font-bold mb-4">Конструктор Курсов</h2>
+                         <p class="text-lg mb-6">Словно из кубиков LEGO, собери свой идеальный учебный план! Выбирай модули из разных областей — от программирования до дизайна — и создавай уникальную программу, которая интересна именно тебе. Твоё обучение — твои правила!</p>
+                         <a href="#contact" class="btn-secondary !bg-white !text-[var(--primary-color)] hover:!bg-orange-100 text-lg px-8 py-3">Попробовать бесплатно</a>
+                    </div>
+                    <div class="lg:w-1/2 w-full mt-8 lg:mt-0 p-6">
+                       <div id="constructor-animation" class="relative w-full h-80 flex items-center justify-center">
+                           <!-- Tinder-like animation will be here -->
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- COURSES SECTION -->
+        <section id="courses" class="py-16 md:py-24 bg-[var(--bg-color)]">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl sm:text-5xl font-bold leading-tight tracking-tight mb-4 playful-font">
+                        <span class="gradient-text">Наши Направления</span>
+                    </h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">От подготовки к экзаменам до освоения новой профессии — у нас есть всё для твоего развития!</p>
+                </div>
+                 <!-- TABS -->
+                <div id="course-tabs" class="flex justify-center mb-10">
+                    <nav class="flex flex-wrap justify-center gap-2 sm:gap-4 p-2 rounded-full bg-orange-50 border border-orange-200">
+                        <a href="#" data-filter="all" class="course-tab tab-active text-sm font-semibold leading-normal tracking-wide whitespace-nowrap px-4 py-2 rounded-full transition-all duration-300">Все</a>
+                        <a href="#" data-filter="ege" class="course-tab tab-inactive text-sm font-semibold leading-normal tracking-wide whitespace-nowrap px-4 py-2 rounded-full transition-all duration-300">Для ЕГЭ</a>
+                        <a href="#" data-filter="oge" class="course-tab tab-inactive text-sm font-semibold leading-normal tracking-wide whitespace-nowrap px-4 py-2 rounded-full transition-all duration-300">Для ОГЭ</a>
+                        <a href="#" data-filter="profession" class="course-tab tab-inactive text-sm font-semibold leading-normal tracking-wide whitespace-nowrap px-4 py-2 rounded-full transition-all duration-300">Профессии</a>
+                        <a href="#" data-filter="general" class="course-tab tab-inactive text-sm font-semibold leading-normal tracking-wide whitespace-nowrap px-4 py-2 rounded-full transition-all duration-300">Общие</a>
+                    </nav>
+                </div>
+
+                <div id="course-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 p-4">
+                    <article class="card flex flex-col" data-category="profession">
+                        <div class="w-full bg-center bg-no-repeat aspect-[16/10] bg-cover rounded-2xl" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCq1dK9upvqvEJ0BkzgzBCuaPVweiRHYE5aEJ-YqcB6h_MqK5ygVTB2zq76Lp969-hgjFNA1AQfgpoL3kA_X0sRISpjjJ9aDaFMiQ0tS7-T9sX97NG4_viX8RoGw37lj6_rHTeGKTcLmfNjY_0wzVIRRmjOHwKILXhaxYjSs1iRsQ7TJbFaj7A63FtbCEMimQgZ5awZqOIymHXxJ51Q5_fAogf6OSsoQbzUo5Fd59ygzffVZqDzA6EuRfoP9_tC2I8iGZzSx1u7");'></div>
+                        <div class="pt-5 flex flex-col flex-grow">
+                            <h3 class="text-lg font-semibold leading-normal mb-1">Основы Python для Юных Кодеров</h3>
+                            <p class="text-gray-500 text-sm mt-1 mb-3 flex-grow">Начни свое путешествие в мир программирования весело и легко!</p>
+                            <div class="flex items-center justify-between mt-auto pt-2">
+                                <span class="text-xs font-medium bg-[var(--bg-color)] text-[var(--primary-color)] px-3 py-1 rounded-full">Профессии</span>
+                                <span class="text-lg font-bold text-[var(--primary-color)]">Бесплатно</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card flex flex-col" data-category="oge">
+                        <div class="w-full bg-center bg-no-repeat aspect-[16/10] bg-cover rounded-2xl" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBT6NcnAZiIdwaFPp3tM9bqjpqFcAuAxdOTa-4w0FiqR8Ku2CUI-mqNCzEgcEABRNqtf4K6TbjLJQE43Cl8t5Vo3Md92IJFn5P8JzH52DDvEgxNYVscNBxtB2RfTeUwAXFiMAJXA-Fj6BwXfkXy-9DiMi1Kdjdnu_rRGfeI-JliRBvTMKGc43Pzq02P4OhRz_GGNiceNZvzrZZ3rycRGwjmcpbDcFn0RzC_YwwCnqIThAzw10ZeTrjlU7n4s8SQPvLKBfOlRaTN");'></div>
+                        <div class="pt-5 flex flex-col flex-grow">
+                            <h3 class="text-lg font-semibold leading-normal mb-1">Математика для ОГЭ на 5+</h3>
+                            <p class="text-gray-500 text-sm mt-1 mb-3 flex-grow">Разберем все сложные темы и научимся решать любые задачи экзамена.</p>
+                            <div class="flex items-center justify-between mt-auto pt-2">
+                                <span class="text-xs font-medium bg-[var(--bg-color)] text-[var(--primary-color)] px-3 py-1 rounded-full">Для ОГЭ</span>
+                                <span class="text-lg font-bold text-[var(--primary-color)]">1990 ₽</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card flex flex-col" data-category="ege">
+                        <div class="w-full bg-center bg-no-repeat aspect-[16/10] bg-cover rounded-2xl" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB7nfcuUaEuFH_RzdrGtgHaamwIEyQsHutBryJh2OoK1NqmzRJXcP1EAV9_Ud-JCvQ6Mll4MWD5CUzRERqDfqUuT9hzZT8Nro8LTE2gxkUYehC2vnknOVdpbFmfHCDH8R6eLXm3Z6TWwyqbHDRvTQXe58hb9Ew0cgZhlHkFI1kwa6rt04kJJnN9nZqD7a3HF4XBjxYPFsyu2YrIpLhsTLqK8z1W0uVY2-Nesm8a0nIAqrYViJmuOVfA6hHZrtAjzMSGCAeHI8b8");'></div>
+                        <div class="pt-5 flex flex-col flex-grow">
+                            <h3 class="text-lg font-semibold leading-normal mb-1">Обществознание для ЕГЭ: 90+</h3>
+                            <p class="text-gray-500 text-sm mt-1 mb-3 flex-grow">Глубокое погружение в темы кодификатора и практика на реальных заданиях.</p>
+                            <div class="flex items-center justify-between mt-auto pt-2">
+                                <span class="text-xs font-medium bg-[var(--bg-color)] text-[var(--primary-color)] px-3 py-1 rounded-full">Для ЕГЭ</span>
+                                <span class="text-lg font-bold text-[var(--primary-color)]">2490 ₽</span>
+                            </div>
+                        </div>
+                    </article>
+                     <article class="card flex flex-col" data-category="profession">
+                        <div class="w-full bg-center bg-no-repeat aspect-[16/10] bg-cover rounded-2xl" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCcBMDjaZywwMkmzbnIKqYqdLIx6CZye5pQPOLegeZyRBDSvZ5MkWU859frNzUwDjNi8TPDdf3QH2tyyQEZcICcnmBALX_phTLMMdcwbJf4qiyQEAObyqhYUOKbcit4PI6WY585hehdEIKO48t9CgXAn8QY9tQXor3MuLlcVcd8exeDxziwpxUNlXHqxL5E3NwZu_m2k8ALmwqd_wMkWBFx1yJAbc1IFbE8tiKf61LrFUon5_KbogjsQBgdbQP_Ucj53RUonylg");'></div>
+                        <div class="pt-5 flex flex-col flex-grow">
+                            <h3 class="text-lg font-semibold leading-normal mb-1">Графический Дизайнер с Нуля</h3>
+                            <p class="text-gray-500 text-sm mt-1 mb-3 flex-grow">Создавай логотипы, иллюстрации и фирменный стиль, которые впечатляют.</p>
+                            <div class="flex items-center justify-between mt-auto pt-2">
+                                <span class="text-xs font-medium bg-[var(--bg-color)] text-[var(--primary-color)] px-3 py-1 rounded-full">Профессии</span>
+                                <span class="text-lg font-bold text-[var(--primary-color)]">4500 ₽</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="card flex flex-col" data-category="general">
+                        <div class="w-full bg-center bg-no-repeat aspect-[16/10] bg-cover rounded-2xl" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD0cJMlJG3GcKndBeHrTmCA2hZjsWYc0Dc_1r6d8xWmKrz1neiVW2m7kTwHkF8QVXYtAhFbC-7OBE0gFHx9gxo45UAfC6p-QNKHtg0XJ4RK2pSRIO-HKPCMUdm_WGhQMRxBX5Ad-MY7dVxJvAy-dyQh3KJtd9rnjJ3hrZaUBFtR9VepvkDvQdPkh_KUIUqV5edVPbavb1qK-xWbmbQBIV5KMhaz4q3dROxUK4Fp-WHnSOzBnxBmVuerfQtWel-j49Ict6kghkS8");'></div>
+                        <div class="pt-5 flex flex-col flex-grow">
+                            <h3 class="text-lg font-semibold leading-normal mb-1">Развитие Soft-Skills</h3>
+                            <p class="text-gray-500 text-sm mt-1 mb-3 flex-grow">Учимся общению, работе в команде и лидерству через игры и проекты.</p>
+                            <div class="flex items-center justify-between mt-auto pt-2">
+                                <span class="text-xs font-medium bg-[var(--bg-color)] text-[var(--primary-color)] px-3 py-1 rounded-full">Общие</span>
+                                <span class="text-lg font-bold text-[var(--primary-color)]">1500 ₽</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="text-center mt-12">
+                    <button class="btn-primary px-8 py-3 text-lg font-semibold">Показать все направления</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- TEAM SECTION -->
+        <section id="team" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                 <div class="text-center mb-12 md:mb-16">
+                    <h2 class="playful-font text-4xl sm:text-5xl font-bold text-[var(--text-primary)] mb-4">Наша Супер-Команда!</h2>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto">Встречайте наших волшебников знаний! Эти удивительные преподаватели помогут вам открыть таланты и весело провести время, учась новому!</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <div class="card flex flex-col items-center text-center">
+                        <div class="relative w-36 h-36">
+                            <img alt="Елена Ковалева" class="w-full h-full object-cover rounded-full shadow-lg border-4 border-white ring-4 ring-[var(--primary-color)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMiZibv0BlTe-ZcFZ1SzrebZGxqTTZS14UkX1jUWCd7ayrYtLIA9VpKwvigI9Hj8xAnGKhSuuYuCgkZ0W1e6fmB9irNxcIArm2zHK-JX0oE5F6XahdBO1qZ8gKziOho_EJFVzS5v6E3kxt_SyuyeRI6ZlxRi3fJ_vFUAkP3X5UfcLlymqOEg72nthW2WZiznKUC7zeu6szKTw1hGM7UYfD-JdueIZzFkbgQH6pjd6r3e96psOj8uWKRK4oRNVo3irPmbBd7iBg"/>
+                        </div>
+                        <div class="mt-4">
+                            <h3 class="playful-font text-[var(--primary-color)] text-2xl font-bold leading-snug">Елена Ковалева</h3>
+                            <p class="text-gray-700 text-base font-medium leading-normal mt-1">Кандидат педагогических наук</p>
+                            <p class="text-gray-500 text-sm font-normal leading-normal">15 лет опыта в обучении</p>
+                        </div>
+                    </div>
+                    <div class="card flex flex-col items-center text-center">
+                        <div class="relative w-36 h-36">
+                            <img alt="Александр Максимов" class="w-full h-full object-cover rounded-full shadow-lg border-4 border-white ring-4 ring-[var(--secondary-color)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAvLdW_uk_N6NDyRA2YyCMUQHTT_M9cK7p9EYsPjpS1nL9zOQphDt3kU9r8CoSCarxB-Wm9D83AGRFhMz3m7xGbQpTTGCdgOGuN3nrGvaCBXxiDndNFejcwUAsLA2KCn5gcfiLOWBTp0ShKPOBMvS3A7Vomx3bGbnWRHzRWcF_41X9QZW3_h1ygcNGgzghQ0pIzuYiQMWB2GywnB9_rITP9Pcf-jKQkIheiqVK7Lm0tE9csuJzTIKUWvQ0k7KLBtW7R61eckCD"/>
+                        </div>
+                         <div class="mt-4">
+                            <h3 class="playful-font text-[var(--secondary-color)] text-2xl font-bold leading-snug">Александр Максимов</h3>
+                            <p class="text-gray-700 text-base font-medium leading-normal mt-1">Магистр психологии</p>
+                            <p class="text-gray-500 text-sm font-normal leading-normal">10 лет опыта в профориентации</p>
+                        </div>
+                    </div>
+                    <div class="card flex flex-col items-center text-center">
+                        <div class="relative w-36 h-36">
+                            <img alt="Ольга Петрова" class="w-full h-full object-cover rounded-full shadow-lg border-4 border-white ring-4 ring-[var(--accent-color)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzfzxHYuDS6dqw6Q2HxvHL4_bUOxIRaJ9lMRp8sJL2oT2E09xeKuIXlmr6DDUY8Neorkz2rH9Ts8mm-TOvizELCw75ja1vjQWzftp7mqX2xf3BqEQBYpEb6QGDUY1yB7goH9a6Nn3eRS9C2til_HcYcJNlS0mTHj8YNxrI3H1jZOGpMd07SFd7aaq1hXvh0_HBS9hVcv_AFXMrQ0MQ-68tyZqJ1LpctDFtCaFIwZ7EuZW46OE9ON9kQfvsmoOXrrgsTmJQ_0EU"/>
+                        </div>
+                        <div class="mt-4">
+                            <h3 class="playful-font text-[var(--accent-color)] text-2xl font-bold leading-snug">Ольга Петрова</h3>
+                            <p class="text-gray-700 text-base font-medium leading-normal mt-1">Психолог-консультант</p>
+                            <p class="text-gray-500 text-sm font-normal leading-normal">8 лет помогает найти призвание</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT FORM SECTION -->
+        <section id="contact" class="py-16 md:py-24 bg-[var(--bg-color)]">
+             <div class="relative hero-gradient-override px-4 py-16 md:px-10 lg:px-20 xl:px-40">
+                <div class="max-w-2xl mx-auto text-center">
+                    <h2 class="playful-font text-4xl sm:text-5xl text-white font-bold mb-4">Готовы начать свой путь?</h2>
+                    <p class="text-white/90 mt-2 text-lg mb-10">Оставьте заявку, и мы свяжемся с вами, чтобы подобрать идеальную программу!</p>
+                    <div class="bg-white rounded-3xl p-8 sm:p-10 md:p-12 shadow-2xl text-left">
+                        <form class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2" for="name">Ваше имя</label>
+                                <input class="form-input block w-full h-12 px-4 rounded-xl border-gray-300 focus:border-[var(--primary-color)] focus:ring focus:ring-[var(--primary-color)] focus:ring-opacity-50 transition" id="name" name="name" placeholder="Например, Иван" type="text"/>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2" for="email">Электронная почта</label>
+                                <input class="form-input block w-full h-12 px-4 rounded-xl border-gray-300 focus:border-[var(--primary-color)] focus:ring focus:ring-[var(--primary-color)] focus:ring-opacity-50 transition" id="email" name="email" placeholder="your.email@example.com" type="email"/>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2" for="interest">Что вас интересует?</label>
+                                <textarea class="form-input block w-full px-4 py-3 rounded-xl border-gray-300 focus:border-[var(--primary-color)] focus:ring focus:ring-[var(--primary-color)] focus:ring-opacity-50 transition resize-none" id="interest" name="interest" placeholder="Расскажите о своих увлечениях или целях..." rows="4"></textarea>
+                            </div>
+                            <div class="flex justify-center pt-2">
+                                <button class="btn-primary h-14 px-12 text-lg" type="submit">Отправить заявку!</button>
+                            </div>
+                        </form>
+                         <p class="mt-6 text-xs text-gray-500 text-center">Нажимая "Отправить заявку", вы соглашаетесь с нашей <a class="text-[var(--primary-color)] hover:underline" href="#">Политикой конфиденциальности</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-800 text-gray-300 py-12 px-4 md:px-10 lg:px-20">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+            <div>
+                <h3 class="text-xl font-semibold text-white mb-3">beep-mind</h3>
+                <p class="text-sm">Помогаем найти свой путь и раскрыть таланты.</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-semibold text-white mb-3">Навигация</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a class="hover:text-[var(--primary-color)] transition-colors" href="#about">О нас</a></li>
+                    <li><a class="hover:text-[var(--primary-color)] transition-colors" href="#courses">Направления</a></li>
+                    <li><a class="hover:text-[var(--primary-color)] transition-colors" href="#team">Команда</a></li>
+                    <li><a class="hover:text-[var(--primary-color)] transition-colors" href="#contact">Контакты</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-semibold text-white mb-3">Свяжитесь с нами</h3>
+                <p class="text-sm">info@beep-mind.ru</p>
+                <p class="text-sm">+7 (800) 555-35-35</p>
+                <div class="flex justify-center md:justify-start gap-4 mt-3">
+                     <a href="#" class="text-gray-400 hover:text-sky-500 transition-colors duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="m9.417 15.181-.397 5.584c.568 0 .814-.244 1.109-.537l2.663-2.545 5.518 4.041c1.012.564 1.725.267 1.998-.931L22.43 3.864c.345-1.615-.833-2.298-1.94-1.742L2.347 8.402c-1.554.6-1.55 1.482-.288 1.811L8.25 12.45l9.86-6.235c.449-.283.875-.133.523.182Z"/></svg>
+                     </a>
+                     <a href="#" class="text-gray-400 hover:text-blue-500 transition-colors duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.84c-.15.48-.52.62-.9.45-.48-.21-1.05-.4-1.68-.59-.69-.2-1.42-.31-2.06-.31-.57 0-1.13.08-1.68.24-.55.16-1.09.4-1.62.72-.52.32-.98.71-1.42 1.17-.43.46-.88.98-1.02 1.63-.13.6.14 1.25.43 1.84.29.59.62 1.14.99 1.66.42.58.89 1.1 1.42 1.55.53.45 1.1.83 1.71 1.14.61.31 1.25.52 1.91.62.66.1 1.32-.01 1.97-.24.65-.23 1.28-.59 1.84-1.06.56-.47 1.05-1.02 1.42-1.64.37-.62.63-1.3.62-2.02-.02-1.39-.77-2.67-1.7-3.56-.1-.1-.2-.18-.31-.26z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="mt-8 pt-8 border-t border-gray-700 text-center text-sm text-gray-400">
+            <p>© 2024 beep-mind. Все права защищены.</p>
+        </div>
+    </footer>
+</div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Course Tab Filtering Logic
+        const courseTabs = document.querySelectorAll('.course-tab');
+        const courseGrid = document.getElementById('course-grid');
+        const courseCards = courseGrid.querySelectorAll('article');
+
+        courseTabs.forEach(tab => {
+            tab.addEventListener('click', (e) => {
+                e.preventDefault();
+                courseTabs.forEach(t => t.classList.replace('tab-active', 'tab-inactive'));
+                tab.classList.replace('tab-inactive', 'tab-active');
+                const filter = tab.dataset.filter;
+                courseCards.forEach(card => {
+                    card.style.display = (filter === 'all' || card.dataset.category === filter) ? 'flex' : 'none';
+                });
+            });
+        });
+
+        // Course Constructor Animation Logic
+        const animationContainer = document.getElementById('constructor-animation');
+        const modules = [
+            { icon: '🎨', text: 'Основы CSS' },
+            { icon: '💻', text: 'Python' },
+            { icon: '📈', text: 'Логарифмы' },
+            { icon: '🇬🇧', text: 'Past Perfect' },
+            { icon: '🤖', text: 'Нейросети' },
+            { icon: '🚀', text: 'Стартапы' },
+            { icon: '✍️', text: 'Написание эссе' },
+            { icon: '🐙', text: 'Git & GitHub' }
+        ];
+        let currentModuleIndex = 0;
+        let lastTwoSwipes = []; // Array to track the last two swipe directions
+
+        function createCard() {
+            if (!animationContainer) return;
+
+            const module = modules[currentModuleIndex];
+            currentModuleIndex = (currentModuleIndex + 1) % modules.length;
+
+            const card = document.createElement('div');
+            card.className = 'absolute w-48 h-60 bg-white rounded-2xl shadow-2xl flex flex-col items-center justify-center p-4 cursor-pointer select-none border-4 border-transparent transition-all duration-300';
+            card.innerHTML = `<span class="text-6xl mb-4">${module.icon}</span><p class="font-bold text-xl text-center text-gray-800">${module.text}</p>`;
+            
+            card.classList.add('animate-card-appear');
+            animationContainer.appendChild(card);
+            
+            setTimeout(() => {
+                let swipeDirection;
+                // Logic to prevent more than two consecutive swipes in the same direction
+                if (lastTwoSwipes.length === 2 && lastTwoSwipes[0] === lastTwoSwipes[1]) {
+                    swipeDirection = lastTwoSwipes[0] === 'left' ? 'right' : 'left';
+                } else {
+                    swipeDirection = Math.random() > 0.5 ? 'right' : 'left';
+                }
+                
+                // Update swipe history
+                lastTwoSwipes.push(swipeDirection);
+                if (lastTwoSwipes.length > 2) {
+                    lastTwoSwipes.shift();
+                }
+
+                const decisionBorderColor = swipeDirection === 'right' ? 'var(--like-color)' : 'var(--dislike-color)';
+
+                card.style.borderColor = decisionBorderColor;
+                
+                setTimeout(() => {
+                    card.classList.add(swipeDirection === 'right' ? 'animate-swipe-right' : 'animate-swipe-left');
+                }, 100);
+
+                card.addEventListener('animationend', () => {
+                   if(card.parentNode) {
+                       card.remove();
+                   }
+                }, { once: true });
+
+            }, 1500); // Wait 1.5s before swiping
+        }
+
+        setInterval(createCard, 2500); // Create a new card every 2.5 seconds
+        createCard(); // Initial card
+    });
+</script>
+</body>
+</html>
